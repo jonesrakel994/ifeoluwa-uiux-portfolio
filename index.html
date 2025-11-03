@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ifeoluwa Bammeke | UI/UX Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- Configure Tailwind with custom colors and font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rich-purple': '#4A148C', // Deep, rich violet
+                        'coral-accent': '#FF6B6B', // Vibrant coral
+                        'gold-accent': '#FFD700', // Classic gold
+                        'dark-bg': '#1A0033', // Very dark purple/near black
+                        'light-text': '#E0E0E0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for aesthetics */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #FFD700;
+            border-radius: 4px;
+        }
+        body {
+            background-color: #1A0033;
+            color: #E0E0E0;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .portfolio-card {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(74, 20, 140, 0.5); /* rich-purple shadow */
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur-sm shadow-xl">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gold-accent tracking-wider">Ifeoluwa B.</div>
+            <div class="space-x-4 hidden sm:flex">
+                <a href="#hero" class="text-light-text hover:text-coral-accent transition duration-150">Home</a>
+                <a href="#about" class="text-light-text hover:text-coral-accent transition duration-150">About</a>
+                <a href="#portfolio" class="text-light-text hover:text-coral-accent transition duration-150">Portfolio</a>
+                <a href="#contact" class="text-light-text hover:text-coral-accent transition duration-150">Contact</a>
+            </div>
+            <!-- Mobile Menu Placeholder (Hidden for simplicity but standard UX practice) -->
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+        <!-- 1. Hero Section -->
+        <section id="hero" class="h-screen flex items-center justify-center text-center p-6 bg-dark-bg">
+            <div class="space-y-6">
+                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold text-light-text leading-tight">
+                    Ifeoluwa <span class="text-coral-accent">Bammeke</span>
+                </h1>
+                <p class="text-xl sm:text-2xl font-light text-rich-purple tracking-widest uppercase">
+                    UI/UX Designer & Creative Thinker
+                </p>
+                <a href="#portfolio" class="inline-flex items-center px-8 py-3 mt-8 text-lg font-medium text-dark-bg bg-gold-accent rounded-full shadow-lg hover:bg-white transition duration-300">
+                    View My Work
+                    <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about" class="py-20 px-6 sm:px-8 lg:px-6 bg-rich-purple/20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-8 text-gold-accent border-b-2 border-gold-accent pb-2 inline-block">About Me</h2>
+
+                <div class="bg-dark-bg p-8 rounded-xl shadow-2xl space-y-4">
+                    <p class="text-lg leading-relaxed text-light-text">
+                        Ifeoluwa is a UI/UX Designer and creative content writer who translates real-world empathy into digital solutions. My background in **journalism** taught me how to distill complex information into clear narratives, a skill I now apply to crafting seamless user journeys.
+                    </p>
+                    <p class="text-lg leading-relaxed text-light-text">
+                        Experiences in **relationship management** and **skincare consulting** honed my ability to listen deeply to user needs and address pain points with thoughtful, precise solutions—ensuring every design decision is rooted in human-centered problem-solving and delivers meaningful results. I am passionate about creating intuitive and visually compelling products.
+                    </p>
+                    <div class="pt-4 flex justify-center sm:justify-start">
+                        <a href="https://www.linkedin.com/in/rachael-barbara" target="_blank" class="flex items-center text-coral-accent hover:text-gold-accent transition duration-300 font-medium">
+                            Connect on LinkedIn
+                            <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Portfolio Section -->
+        <section id="portfolio" class="py-20 px-6 sm:px-8 lg:px-6">
+            <h2 class="text-4xl font-bold mb-12 text-coral-accent text-center">Featured Projects</h2>
+
+            <!-- Changed grid layout to accommodate 3 projects neatly on larger screens -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+                <!-- Project 1: Bharbie Shoes E-commerce Redesign -->
+                <div class="portfolio-card bg-rich-purple/30 p-8 rounded-2xl border border-rich-purple/50">
+                    <h3 class="text-3xl font-semibold mb-3 text-light-text">Bharbie Shoes E-commerce Redesign</h3>
+                    <p class="text-sm font-light text-gold-accent mb-6">UX/UI Design | E-commerce Optimization</p>
+
+                    <div class="mb-6 text-light-text">
+                        <p class="mb-4">
+                            A comprehensive e-commerce platform redesign for a contemporary shoe brand. This project focused on optimizing the purchasing funnel, enhancing product discovery, and improving site navigation to significantly boost conversion rates and user retention for the modern shopper.
+                        </p>
+                        <ul class="list-disc list-inside space-y-1 text-sm opacity-80">
+                            <li>Focus: Conversion Flow & Information Architecture</li>
+                            <li>Industry: Fashion & E-commerce</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://www.figma.com/design/eOqYx1RuKNS73dGmmPHToX/Bharbie-Shoes-Ecom-V1?node-id=126-340&t=LJ417RcPdlH7VaFx-1" target="_blank" class="inline-flex items-center text-gold-accent hover:text-coral-accent transition duration-300 font-medium">
+                        View Figma File
+                        <i data-lucide="figma" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2: Brand Logo for Lashed By Onyx -->
+                <div class="portfolio-card bg-rich-purple/30 p-8 rounded-2xl border border-rich-purple/50">
+                    <h3 class="text-3xl font-semibold mb-3 text-light-text">Brand Identity: Lashed By Onyx</h3>
+                    <p class="text-sm font-light text-gold-accent mb-6">Visual Design | Branding</p>
+
+                    <div class="mb-6 text-light-text">
+                        <p class="mb-4">
+                            Development of a cohesive brand identity and logo for a premium beauty service. The focus was on creating a visual system that conveys luxury, trust, and professionalism, ensuring the brand resonated instantly with its high-end target audience across all digital touchpoints.
+                        </p>
+                        <ul class="list-disc list-inside space-y-1 text-sm opacity-80">
+                            <li>Focus: Visual Identity & Market Resonance</li>
+                            <li>Industry: Beauty & Services</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://www.figma.com/design/MKa9ZQBidDIVf6akfQtESj/Brand-Logo-for-Lashed-By-Onyx?node-id=0-1&t=5ffOnYHgeOjDQxUO-1" target="_blank" class="inline-flex items-center text-gold-accent hover:text-coral-accent transition duration-300 font-medium">
+                        View Figma File
+                        <i data-lucide="figma" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Project 3: Event App v1.0 - Seamless Discovery & Management -->
+                <div class="portfolio-card bg-rich-purple/30 p-8 rounded-2xl border border-rich-purple/50">
+                    <h3 class="text-3xl font-semibold mb-3 text-light-text">Event App v1.0: Seamless Discovery & Management</h3>
+                    <p class="text-sm font-light text-gold-accent mb-6">Mobile UX/UI Design | Product Design</p>
+
+                    <div class="mb-6 text-light-text">
+                        <p class="mb-4">
+                            A mobile application designed to simplify event discovery and registration. It focuses on creating an intuitive, personalized user experience, using recommendation algorithms to suggest relevant events and streamlining the ticket purchase process to minimize friction.
+                        </p>
+                        <ul class="list-disc list-inside space-y-1 text-sm opacity-80">
+                            <li>Focus: User Flow, Mobile UX, Personalization</li>
+                            <li>Industry: Events & Technology</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://www.figma.com/design/kJLngoDVoYryMHYlOSNIuq/Event-App-v1.0?node-id=286-1905&t=HufIT7fQZxA0rfgJ-1" target="_blank" class="inline-flex items-center text-gold-accent hover:text-coral-accent transition duration-300 font-medium">
+                        View Figma File
+                        <i data-lucide="figma" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- 4. Contact/Call to Action Section -->
+        <section id="contact" class="py-20 px-6 sm:px-8 lg:px-6 text-center bg-rich-purple/40">
+            <h2 class="text-4xl font-bold mb-4 text-light-text">Ready to Connect?</h2>
+            <p class="text-xl mb-8 text-light-text/80">
+                I'm eager to bring empathy and strategic thinking to your team.
+            </p>
+
+            <a href="https://www.linkedin.com/in/rachael-barbara" target="_blank" class="inline-flex items-center px-10 py-4 text-xl font-semibold text-dark-bg bg-coral-accent rounded-full shadow-lg hover:bg-gold-accent transition duration-300">
+                Connect on LinkedIn
+                <i data-lucide="linkedin" class="w-6 h-6 ml-3 fill-dark-bg"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-rich-purple py-8">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-sm text-light-text/60">
+            <p>&copy; 2024 Ifeoluwa Bammeke. All rights reserved.</p>
+            <div class="mt-4 sm:mt-0 space-x-4">
+                <a href="#hero" class="hover:text-gold-accent transition duration-150">Home</a>
+                <a href="#portfolio" class="hover:text-gold-accent transition duration-150">Portfolio</a>
+                <a href="https://www.linkedin.com/in/rachael-barbara" target="_blank" class="text-gold-accent hover:text-coral-accent transition duration-150">
+                    <i data-lucide="linkedin" class="w-5 h-5 inline-block"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
